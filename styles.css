@@ -24,15 +24,26 @@ form input {
     margin-bottom: 14px;
     padding: 6px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 form input:focus {
-    outline: 2px solid rgb(255, 115, 0);
+    outline: 2px solid rgba(255, 166, 50, 0.829);
+}
+  
+input:valid {
+  border: 2px solid green;
+}
+
+.invalid {
+  border: 2px solid red;
 }
 
 form label {
     margin-bottom: 1px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 button {
@@ -48,4 +59,14 @@ button {
 button:hover {
     background-color: rgb(253, 140, 47);
     color: white;
+}
+
+button:focus {
+  background-color: rgb(253, 140, 47);
+  color: white;
+}
+
+.errormsg {
+  color: red;
+  font-size: 12px;
 }
