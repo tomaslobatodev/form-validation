@@ -8,9 +8,9 @@
   </head>
   <body>
     <form>
-      <label for="name"
-        >Full Name <span id="name-error" class="errormsg"></span
-      ></label>
+      <label for="name">
+        Full Name <span id="name-error" class="errormsg"></span>
+      </label>
       <input type="text" id="name" required minlength="5" maxlength="50" />
 
       <label for="email">
@@ -19,15 +19,19 @@
       </label>
       <input type="email" id="email" required />
 
-      <label for="country"
-        >Country <span id="country-error" class="errormsg"></span
-      ></label>
-      <input type="text" id="country" required minlength="4" maxlength="50" />
+      <label for="country">
+        Country <span id="country-error" class="errormsg"></span>
+      </label>
+      <input type="text" id="country" required minlength="4" maxlength="30" />
 
-      <label for="zipcode">Zipcode <span id="zipcode-error" class="errormsg"></span></label>
-      <input type="number" id="zipcode" required min="1000" max="99999" />
+      <label for="zipcode">
+        Zipcode <span id="zipcode-error" class="errormsg"></span>
+      </label>
+      <input type="number" id="zipcode" required min="1000" max="99999"/>
 
-      <label for="password">Password (+8 digits)</label>
+      <label for="password">Password (+8 digits) 
+        <span class="errormsg" id="password-error"></span>
+      </label>
       <input
         type="password"
         id="password"
@@ -36,14 +40,19 @@
         maxlength="50"
       />
 
-      <label for="passwordconfirm">Password Confirm</label>
+      <label for="confirmpassword">
+        Confirm Password
+        <span class="errormsg" id="confirmpassword-error"></span>
+      </label>
       <input
         type="password"
-        id="passwordconfirm"
+        id="confirmpassword"
         required
         minlength="8"
         maxlength="50"
       />
+
+      <span id="message" class=""></span>
 
       <button type="submit" id="submitbtn">Submit</button>
     </form>
